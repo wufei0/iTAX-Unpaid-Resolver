@@ -1,0 +1,19 @@
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.config
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.pdb
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.xml
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.vbprojResolveAssemblyReference.cache
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmConnection.resources
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmMain.resources
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.Resources.resources
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.vbproj.GenerateResource.Cache
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.exe
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.xml
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.pdb
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmlogin.resources
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.dll
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.Firebird.dll
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.SqlServer.dll
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.xml
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.Firebird.pdb
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.SqlServer.xml
