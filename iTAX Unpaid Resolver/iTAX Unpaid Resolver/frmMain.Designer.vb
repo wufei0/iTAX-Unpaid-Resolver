@@ -22,9 +22,9 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConnectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +38,7 @@ Partial Class frmMain
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel8 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel9 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lstSearch = New System.Windows.Forms.ListView()
         Me.id = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -50,7 +51,6 @@ Partial Class frmMain
         Me.btnFind = New System.Windows.Forms.Button()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ToolStripStatusLabel9 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -68,21 +68,16 @@ Partial Class frmMain
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
         'ExitToolStripMenuItem
         '
+        Me.ExitToolStripMenuItem.Image = CType(resources.GetObject("ExitToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'MaintenanceToolStripMenuItem
@@ -94,14 +89,16 @@ Partial Class frmMain
         '
         'ConnectionToolStripMenuItem
         '
+        Me.ConnectionToolStripMenuItem.Image = CType(resources.GetObject("ConnectionToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ConnectionToolStripMenuItem.Name = "ConnectionToolStripMenuItem"
-        Me.ConnectionToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.ConnectionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ConnectionToolStripMenuItem.Text = "Connection"
         '
         'AboutToolStripMenuItem
         '
+        Me.AboutToolStripMenuItem.Image = CType(resources.GetObject("AboutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'StatusStrip1
@@ -162,9 +159,19 @@ Partial Class frmMain
         Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(79, 17)
         Me.ToolStripStatusLabel8.Text = "Disconnected"
         '
+        'ToolStripStatusLabel9
+        '
+        Me.ToolStripStatusLabel9.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right
+        Me.ToolStripStatusLabel9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripStatusLabel9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripStatusLabel9.Name = "ToolStripStatusLabel9"
+        Me.ToolStripStatusLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ToolStripStatusLabel9.Size = New System.Drawing.Size(4, 17)
+        '
         'GroupBox1
         '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.lstSearch)
         Me.GroupBox1.Controls.Add(Me.btnFind)
@@ -179,7 +186,8 @@ Partial Class frmMain
         '
         'lstSearch
         '
-        Me.lstSearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.lstSearch.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lstSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lstSearch.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.id, Me.TD, Me.Pin, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
@@ -231,7 +239,7 @@ Partial Class frmMain
         'btnFind
         '
         Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFind.Location = New System.Drawing.Point(271, 18)
+        Me.btnFind.Location = New System.Drawing.Point(418, 17)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Size = New System.Drawing.Size(49, 21)
         Me.btnFind.TabIndex = 2
@@ -241,11 +249,11 @@ Partial Class frmMain
         'txtFind
         '
         Me.txtFind.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtFind.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList
+        Me.txtFind.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources
         Me.txtFind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFind.Location = New System.Drawing.Point(71, 18)
         Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(194, 21)
+        Me.txtFind.Size = New System.Drawing.Size(341, 21)
         Me.txtFind.TabIndex = 1
         '
         'Label1
@@ -256,20 +264,9 @@ Partial Class frmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Pin / Td No / Name / Lotno"
         '
-        'ToolStripStatusLabel9
-        '
-        Me.ToolStripStatusLabel9.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right
-        Me.ToolStripStatusLabel9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripStatusLabel9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripStatusLabel9.Name = "ToolStripStatusLabel9"
-        Me.ToolStripStatusLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStripStatusLabel9.Size = New System.Drawing.Size(4, 17)
-        '
         'Label2
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(455, 269)
@@ -290,9 +287,8 @@ Partial Class frmMain
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "iTAX Unpaid Resolver"
@@ -308,7 +304,6 @@ Partial Class frmMain
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MaintenanceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConnectionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

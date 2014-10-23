@@ -22,6 +22,7 @@ Partial Class frmlogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmlogin))
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnAccept = New System.Windows.Forms.Button()
         Me.chkPassword = New System.Windows.Forms.CheckBox()
@@ -34,7 +35,6 @@ Partial Class frmlogin
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(282, 21)
         Me.txtPassword.TabIndex = 0
-        Me.txtPassword.Text = "p@ssword"
         Me.txtPassword.UseSystemPasswordChar = True
         '
         'btnAccept
@@ -64,12 +64,14 @@ Partial Class frmlogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(304, 70)
-        Me.ControlBox = False
         Me.Controls.Add(Me.chkPassword)
         Me.Controls.Add(Me.btnAccept)
         Me.Controls.Add(Me.txtPassword)
         Me.Font = New System.Drawing.Font("Tahoma", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmlogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Security"

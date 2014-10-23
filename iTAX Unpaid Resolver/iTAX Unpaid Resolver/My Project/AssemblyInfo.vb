@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("iTAX Unpaid Resolver")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("The user of this tool is responsible for its data. This doesnt come with warranty. Use at your own risk. For more info, please contact MISD @6070146 and look for tj. Build October 2014")> 
+<Assembly: AssemblyCompany("PGLU - MISD")> 
 <Assembly: AssemblyProduct("iTAX Unpaid Resolver")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("Copyleft October 2014")> 
+<Assembly: AssemblyTrademark("made by wufei0")> 
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.1")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> 

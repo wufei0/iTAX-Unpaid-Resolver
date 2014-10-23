@@ -22,6 +22,7 @@ Partial Class frmConnection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConnection))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -37,7 +38,7 @@ Partial Class frmConnection
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(21, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
+        Me.Label1.Size = New System.Drawing.Size(64, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Server Host"
         '
@@ -64,7 +65,7 @@ Partial Class frmConnection
         Me.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtServer.Location = New System.Drawing.Point(90, 15)
         Me.txtServer.Name = "txtServer"
-        Me.txtServer.Size = New System.Drawing.Size(224, 20)
+        Me.txtServer.Size = New System.Drawing.Size(224, 21)
         Me.txtServer.TabIndex = 1
         '
         'txtPassword
@@ -72,7 +73,7 @@ Partial Class frmConnection
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPassword.Location = New System.Drawing.Point(90, 41)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(224, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(224, 21)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -81,7 +82,7 @@ Partial Class frmConnection
         Me.txtDatabase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDatabase.Location = New System.Drawing.Point(90, 67)
         Me.txtDatabase.Name = "txtDatabase"
-        Me.txtDatabase.Size = New System.Drawing.Size(224, 20)
+        Me.txtDatabase.Size = New System.Drawing.Size(224, 21)
         Me.txtDatabase.TabIndex = 3
         '
         'btnUpdate
@@ -117,6 +118,8 @@ Partial Class frmConnection
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmConnection"

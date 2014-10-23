@@ -17,3 +17,4 @@ D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resol
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.xml
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.Firebird.pdb
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.SqlServer.xml
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmAbout.resources

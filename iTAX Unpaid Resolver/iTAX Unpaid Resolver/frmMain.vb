@@ -14,7 +14,7 @@ Public Class frmMain
 
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.Cursor = Cursors.WaitCursor
         'Open connection.info
         Call dbConf()
         Me.ToolStripStatusLabel2.Text = FirebirdIP
@@ -38,6 +38,44 @@ Public Class frmMain
             Conntest.Close()
         End Try
 
+        'AUTO COMPLETE
+        Dim MySource As New AutoCompleteStringCollection()
+        Dim lst As New List(Of String)
+        Dim FBcmd As New FbCommand
+        Dim FBdr As FbDataReader = Nothing
+
+
+
+        If FBConnectOpen() = True Then
+            Try
+                FBcmd.Connection = FBCon
+                FBcmd.CommandText = "SELECT * FROM RPTASSESSMENT join property  on rptassessment.prop_id = property.prop_id join propertyowner on property.prop_id = propertyowner.prop_id join taxpayer on propertyowner.local_tin = taxpayer.local_tin "
+                FBdr = FBcmd.ExecuteReader
+
+                While FBdr.Read
+                    lst.Add(FBdr!tdno.ToString)
+                    lst.Add(FBdr!pinno.ToString)
+                    lst.Add(FBdr!cadastrallotno.ToString)
+                    lst.Add(FBdr!ownername.ToString)
+
+                End While
+                MySource.AddRange(lst.ToArray)
+                txtFind.AutoCompleteCustomSource = MySource
+                txtFind.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                txtFind.AutoCompleteSource = AutoCompleteSource.CustomSource
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                FBdr.Close()
+                FBcmd.Dispose()
+                FBCon.Close()
+                FBCon.Dispose()
+            End Try
+
+        End If
+
+        Me.Cursor = Cursors.Default
     End Sub
 
 
@@ -79,7 +117,7 @@ Public Class frmMain
                 '& "ON RPTASSESSMENT.PROP_ID = PROPERTY.PROP_ID join PROPERTYOWNER ON PROPERTY.PROP_ID = PROPERTYOWNER.PROP_ID" _
                 '& "JOIN TAXPAYER ON PROPERTYOWNER.LOCAL_TIN = TAXPAYER.LOCAL_TIN WHERE RPTASSESSMENT.ENDED_BV=0 "
 
-                FBcmd.CommandText = "SELECT * FROM RPTASSESSMENT join property  on rptassessment.prop_id = property.prop_id join propertyowner on property.prop_id = propertyowner.prop_id join taxpayer on propertyowner.local_tin = taxpayer.local_tin WHERE TDNO LIKE '%" & Me.txtFind.Text & "%' or pinno like '%" & Me.txtFind.Text & "%' or ownername like '%" & Me.txtFind.Text & "%' or cadastrallotno like '%" & Me.txtFind.Text & "%'"
+                FBcmd.CommandText = "SELECT * FROM RPTASSESSMENT join property  on rptassessment.prop_id = property.prop_id join propertyowner on property.prop_id = propertyowner.prop_id join taxpayer on propertyowner.local_tin = taxpayer.local_tin WHERE (TDNO LIKE '%" & Me.txtFind.Text & "%' or pinno like '%" & Me.txtFind.Text & "%' or ownername like '%" & Me.txtFind.Text & "%' or cadastrallotno like '%" & Me.txtFind.Text & "%') and ended_bv=0"
                 'MsgBox(FBcmd.CommandText)
                 FBdr = FBcmd.ExecuteReader
 
@@ -143,7 +181,7 @@ Public Class frmMain
         Dim fbrdr As FbDataReader
         Dim FBCmd1 As New FbCommand
         Try
-
+            'TPACCOUNT
             fbcmd.Connection = FBCon
             fbcmd.CommandText = "SELECT * FROM TPACCOUNT WHERE  TAXTRANS_ID = " & lstSearch.SelectedItems(0).Text & " "
 
@@ -153,13 +191,18 @@ Public Class frmMain
                 If fbrdr!earmark_ct = "OPN" Then
                     FBCmd1 = New FbCommand
                     FBCmd1.Connection = FBCon
-                    FBCmd1.CommandText = "DELETE TPACCOUNT WHERE POSTING_ID = " & fbrdr!POSTING_ID.ToString & " "
+                    FBCmd1.CommandText = "DELETE from TPACCOUNT WHERE POSTING_ID = " & fbrdr!POSTING_ID.ToString & " "
                     FBCmd1.ExecuteNonQuery()
                     FBCmd1.Dispose()
                 End If
 
 
             End While
+
+           
+
+            MsgBox("Delete posting completed.", MsgBoxStyle.Information + MsgBoxStyle.OkOnly)
+
 
 
         Catch ex As Exception
@@ -181,5 +224,15 @@ Public Class frmMain
 
     Private Sub lstSearch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSearch.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        If MsgBox("Exit?", MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            End
+        End If
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        frmAbout.ShowDialog()
     End Sub
 End Class
