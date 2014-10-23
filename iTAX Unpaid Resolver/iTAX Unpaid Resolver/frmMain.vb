@@ -14,6 +14,10 @@ Public Class frmMain
 
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Show()
+        Me.ToolStripStatusLabel8.Text = "Connecting...."
+        Me.ToolStripStatusLabel8.BackColor = Color.Orange
+        Application.DoEvents()
         Me.Cursor = Cursors.WaitCursor
         'Open connection.info
         Call dbConf()

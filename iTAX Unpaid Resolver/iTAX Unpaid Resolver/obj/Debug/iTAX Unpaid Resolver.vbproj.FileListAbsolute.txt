@@ -2,7 +2,6 @@ D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resol
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.pdb
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.xml
-D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.vbprojResolveAssemblyReference.cache
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmConnection.resources
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmMain.resources
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.Resources.resources
@@ -18,3 +17,9 @@ D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resol
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.Firebird.pdb
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\EntityFramework.SqlServer.xml
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX_Unpaid_Resolver.frmAbout.resources
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.manifest
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.application
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.exe.manifest
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.application
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.CodeAnalysisLog.xml
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.lastcodeanalysissucceeded
