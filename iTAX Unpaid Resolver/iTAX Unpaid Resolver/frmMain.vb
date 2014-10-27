@@ -14,15 +14,20 @@ Public Class frmMain
 
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = My.Application.Info.Title & " v." & FileVersionInfo.GetVersionInfo(Application.ExecutablePath).FileVersion
         Me.Show()
-        Me.ToolStripStatusLabel8.Text = "Connecting...."
-        Me.ToolStripStatusLabel8.BackColor = Color.Orange
-        Application.DoEvents()
+        
+
         Me.Cursor = Cursors.WaitCursor
         'Open connection.info
+        Application.DoEvents()
         Call dbConf()
         Me.ToolStripStatusLabel2.Text = FirebirdIP
         Me.ToolStripStatusLabel5.Text = FirebirdDbase
+
+        Me.ToolStripStatusLabel8.Text = "Connecting...."
+        Me.ToolStripStatusLabel8.BackColor = Color.Orange
+        Application.DoEvents()
         Dim Conntest As New FbConnection
         Conntest.ConnectionString = "User=SYSDBA;Password=" & FirebirdPassword & ";Database=" & FirebirdIP & ":" & FirebirdDbase & ";" _
                                         & "Port=3050;Dialect=3;Charset=utf8;Role=;Connection lifetime=15;Pooling=true;" _
@@ -40,6 +45,8 @@ Public Class frmMain
             Me.btnFind.Enabled = False
         Finally
             Conntest.Close()
+            Conntest.Dispose()
+
         End Try
 
         'AUTO COMPLETE
@@ -182,7 +189,7 @@ Public Class frmMain
         End If
 
         Dim fbcmd As New FbCommand
-        Dim fbrdr As FbDataReader
+        Dim fbrdr As FbDataReader = Nothing
         Dim FBCmd1 As New FbCommand
         Try
             'TPACCOUNT
@@ -238,5 +245,9 @@ Public Class frmMain
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         frmAbout.ShowDialog()
+    End Sub
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
+
     End Sub
 End Class

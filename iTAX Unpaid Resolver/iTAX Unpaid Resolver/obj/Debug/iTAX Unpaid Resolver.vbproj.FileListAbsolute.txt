@@ -23,3 +23,4 @@ D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resol
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.application
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.CodeAnalysisLog.xml
 D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\bin\Debug\iTAX Unpaid Resolver.exe.lastcodeanalysissucceeded
+D:\OneDrive\Projects\iTAX-Unpaid-Resolver\iTAX Unpaid Resolver\iTAX Unpaid Resolver\obj\Debug\iTAX Unpaid Resolver.vbprojResolveAssemblyReference.cache
